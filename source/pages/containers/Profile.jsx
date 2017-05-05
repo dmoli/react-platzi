@@ -45,7 +45,6 @@ class Profile extends Component {
     return (
       <section name="about">
         <h2>
-          DIEGO
           <FormattedMessage
             id="title.profile"
             values={{
