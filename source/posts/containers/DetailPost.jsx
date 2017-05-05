@@ -77,6 +77,11 @@ class DetailPost extends Component {
   }
 }
 
+DetailPost.defaultProps = {
+  user: {},
+  comments: [],
+};
+
 DetailPost.propTypes = {
   id: PropTypes.number.isRequired,
   userId: PropTypes.number.isRequired,
@@ -84,10 +89,11 @@ DetailPost.propTypes = {
   body: PropTypes.string.isRequired,
   user: PropTypes.shape({
     name: PropTypes.string,
-  }).isRequired,
-  comments: PropTypes.arrayOf({
-    name: PropTypes.object,
-  }).isRequired,
+  }),
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.object,
+    })),
 };
 
 export default DetailPost;
